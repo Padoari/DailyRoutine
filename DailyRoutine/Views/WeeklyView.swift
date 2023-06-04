@@ -9,7 +9,6 @@ import SwiftUI
 
 struct WeeklyView: View {
     @EnvironmentObject var routineData: RoutineData
-    
     var week = "6월 3주"
     
     var body: some View {
