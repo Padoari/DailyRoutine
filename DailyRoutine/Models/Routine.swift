@@ -11,10 +11,10 @@ struct Routine: Identifiable {
     var id = UUID()
     var title = ""
     var description = ""
-    var check = [RoutineCheck()]
+    var weeks = [RoutineWeek()]
     
     static var example = Routine(
         title: "스터디 이름",
         description: "스터디 설명",
-        check: [RoutineCheck(), RoutineCheck(), RoutineCheck()])
+        weeks: [RoutineWeek(week: "2023년 6월 2주", check: [RoutineCheck(isCompleted: true), RoutineCheck(isCompleted: true), RoutineCheck(), RoutineCheck()])])
 }
