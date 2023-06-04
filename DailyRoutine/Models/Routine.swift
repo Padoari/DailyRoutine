@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Routine{
-    var title: String
-    var isDoneMon: Bool
-    var isDoneTue: Bool
-    var isDoneWed: Bool
-    var isDoneThu: Bool
-    var isDoneFri: Bool
-    var isDoneSat: Bool
-    var isDoneSun: Bool
-    var targetCount: Int
+struct Routine: Identifiable {
+    var id = UUID()
+    var title = ""
+    var description = ""
+    var check = [RoutineCheck()]
+    
+    static var example = Routine(
+        title: "스터디 이름",
+        description: "스터디 설명",
+        check: [RoutineCheck(), RoutineCheck(), RoutineCheck()])
 }
