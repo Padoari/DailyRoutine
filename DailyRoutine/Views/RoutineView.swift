@@ -24,7 +24,7 @@ struct RoutineView: View {
                 WeekView(week: week)
             }
         }
-        .frame(maxWidth: 300, alignment: .leading)
+        .frame(maxWidth: 320, alignment: .leading)
         .padding(16.0)
         .background(.white)
         .cornerRadius(14)
