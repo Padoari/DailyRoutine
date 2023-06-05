@@ -12,6 +12,7 @@ struct RoutineView: View {
     let routine: Routine
     
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 8.0) {
             VStack(alignment: .leading, spacing: 4.0) {
                 Text(routine.title)

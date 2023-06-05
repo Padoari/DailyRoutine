@@ -8,13 +8,30 @@
 import SwiftUI
 
 struct RoutineDetailView: View {
+    @Binding var routine: Routine
+    let isEditing: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form{
+            VStack(alignment: .leading) {
+                Text(routine.title)
+                    .font(.title2)
+                    .bold()
+                
+                Text(routine.description)
+                    .font(.footnote)
+    
+                Stepper(value: $routine.targetCount){
+                    Text("\(routine.targetCount)")
+                }
+            }
+        }
+        
     }
 }
 
 struct RoutineDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RoutineDetailView()
+        RoutineDetailView(routine: .constant(Routine.example), isEditing: false)
     }
 }
