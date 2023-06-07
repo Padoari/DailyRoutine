@@ -19,6 +19,7 @@ struct RoutineView: View {
                     .font(.headline)
                 Text(routine.description)
                     .font(.caption)
+                Text("\(routine.targetCount)")
             }
             ForEach(routine.weeks)
             { week in

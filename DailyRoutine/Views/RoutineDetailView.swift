@@ -11,27 +11,58 @@ struct RoutineDetailView: View {
     @Binding var routine: Routine
     let isEditing: Bool
     
+    func incrementStep(){
+        routine.targetCount += 1
+        routine.weeks = [RoutineWeek(week: "", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
+    }
+    
+    func decrementStep(){
+        routine.targetCount -= 1
+        routine.weeks = [RoutineWeek(week: "", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
+    }
+    
+
     var body: some View {
+        
+
         Form{
             VStack(alignment: .leading) {
-                Text(routine.title)
-                    .font(.title2)
-                    .bold()
+                if isEditing{
+                    TextField("새로운 루틴", text: $routine.title)
+                        .font(.title2)
+                        .bold()
+                } else {
+                    Text(routine.title)
+                        .font(.title2)
+                        .bold()
+                }
                 
-                Text(routine.description)
-                    .font(.footnote)
-    
-                Stepper(value: $routine.targetCount){
-                    Text("\(routine.targetCount)")
+                if isEditing{
+                    TextField("루틴을 설명해주세요", text: $routine.description)
+                } else {
+                    Text(routine.description)
+                        .font(.footnote)
+                }
+                
+                
+                HStack {
+                    Text("주당 횟수")
+                    if isEditing{
+                        Stepper(onIncrement: incrementStep,
+                                onDecrement: decrementStep) {
+                            Text("\(routine.targetCount)")
+                        }
+                    } else {
+                        Text("\(routine.targetCount)")
+                    }
                 }
             }
         }
-        
     }
 }
 
 struct RoutineDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RoutineDetailView(routine: .constant(Routine.example), isEditing: false)
+        RoutineDetailView(routine: .constant(Routine.example), isEditing: true)
     }
 }

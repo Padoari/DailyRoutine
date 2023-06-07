@@ -10,5 +10,11 @@ import Foundation
 struct RoutineWeek: Identifiable{
     var id = UUID()
     var week = ""
-    var check = [RoutineCheck()]
+    var check = [RoutineCheck]()
+    
+//    public mutating func checkAdd(checkCount: Int) {
+//        for _ in 0 ..< checkCount {
+//            self.check.append(RoutineCheck())
+//        }
+//    }
 }

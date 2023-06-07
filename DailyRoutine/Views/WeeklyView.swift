@@ -9,6 +9,8 @@ import SwiftUI
 
 struct WeeklyView: View {
     @EnvironmentObject var routineData: RoutineData
+    @State private var isAddingNewRoutine = false
+    @State private var newRoutine = Routine()
     @State private var selectedDate = Date()
     private let calendar = Calendar.current
     
@@ -19,25 +21,38 @@ struct WeeklyView: View {
             
             VStack(alignment: .center) {
                 HStack {
-                    Button {
-                        self.selectedDate = self.calendar.date(byAdding: .day, value: -7, to: self.selectedDate) ?? self.selectedDate
-                    } label: {
-                        Image(systemName: "chevron.left")
-                    }
-
                     Text("\(formattedDate(selectedDate))")
                         .font(.headline)
                     
-                    Button {
-                        self.selectedDate = self.calendar.date(byAdding: .day, value: 7, to: self.selectedDate) ?? self.selectedDate
-                    } label: {
-                        Image(systemName: "chevron.right")
+                    Spacer()
+                    
+                    HStack(spacing: 16.0) {
+                        Button {
+                            self.selectedDate = self.calendar.date(byAdding: .day, value: -7, to: self.selectedDate) ?? self.selectedDate
+                        } label: {
+                            Image(systemName: "chevron.left")
+                        }
+                        
+                        Button {
+                            self.selectedDate = self.calendar.date(byAdding: .day, value: 7, to: self.selectedDate) ?? self.selectedDate
+                        } label: {
+                            Image(systemName: "chevron.right")
+                        }
                     }
                 }
+                .padding(20.0)
                 
-                ForEach(routineData.routines)
-                { routines in
-                    RoutineView(routine: routines)
+                ScrollView{
+                    ForEach(routineData.routines) {
+//                        $routines in
+//                        NavigationLink{
+//                            RoutineEditorView(routine: $routines)
+//                        } label: {
+//                            RoutineView(routine: routines)
+//                        }
+                        routines in
+                        RoutineView(routine: routines)
+                    }
                 }
                 
                 Spacer()
@@ -47,9 +62,15 @@ struct WeeklyView: View {
         .navigationTitle("Weekly Routine")
         .toolbar{
             Button{
-                
+                newRoutine = Routine()
+                isAddingNewRoutine = true
             } label: {
                 Image(systemName: "plus")
+            }
+        }
+        .sheet(isPresented: $isAddingNewRoutine) {
+            NavigationView {
+                RoutineEditorView(routine: $newRoutine, isNew: true)
             }
         }
     }
