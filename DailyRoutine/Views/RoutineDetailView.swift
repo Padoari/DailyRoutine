@@ -48,8 +48,7 @@ struct RoutineDetailView: View {
                 HStack {
                     Text("주당 횟수")
                     if isEditing{
-                        Stepper(onIncrement: incrementStep,
-                                onDecrement: decrementStep) {
+                        Stepper(value: $routine.targetCount, in: 1...7) {
                             Text("\(routine.targetCount)")
                         }
                     } else {

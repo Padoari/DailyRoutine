@@ -30,9 +30,8 @@ struct RoutineEditorView: View {
                 ToolbarItem{
                     Button{
                         if isNew{
-                            
+                            routineCopy.weeks = [RoutineWeek(week: "Default", check: Array(repeating: RoutineCheck(), count: routineCopy.targetCount).map { _ in RoutineCheck() })]
                             routineData.routines.append(routineCopy)
-                            
                             dismiss()
                         } else {
                             if isEditing {
