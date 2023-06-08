@@ -17,12 +17,12 @@ struct RoutineView: View {
         
         let filteredWeek = routine.weeks.filter { $0.week == selectedWeek }
         
-        VStack(alignment: .leading, spacing: 8.0) {
-            VStack(alignment: .leading, spacing: 4.0) {
+        VStack(alignment: .leading, spacing: 12.0) {
+            VStack(alignment: .leading, spacing: 8.0) {
                 Text(routine.title)
                     .font(.headline)
                 Text(routine.description)
-                    .font(.caption)
+                    .font(.footnote)
             }
             if filteredWeek.isEmpty {
 //                WeekView(week: RoutineWeek(week: "", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount)))

@@ -45,15 +45,11 @@ struct WeeklyView: View {
                 .padding(20.0)
                 
                 ScrollView{
-                    ForEach(routineData.routines) {
-//                        $routines in
-//                        NavigationLink{
-//                            RoutineEditorView(routine: $routines)
-//                        } label: {
-//                            RoutineView(routine: routines)
-//                        }
-                        routines in
-                        RoutineView(routine: routines, selectedWeek: "\(formattedDate(selectedDate))")
+                    VStack(spacing: 16.0) {
+                        ForEach(routineData.routines) {
+                            routines in
+                            RoutineView(routine: routines, selectedWeek: "\(formattedDate(selectedDate))")
+                        }
                     }
                 }
                 

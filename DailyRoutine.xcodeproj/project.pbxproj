@@ -14,13 +14,10 @@
 		0A5F02D32A29745700D853D8 /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02D22A29745700D853D8 /* WeeklyView.swift */; };
 		0A5F02D52A29780C00D853D8 /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02D42A29780C00D853D8 /* RoutineView.swift */; };
 		0A5F02D92A2995A500D853D8 /* RoutineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02D82A2995A500D853D8 /* RoutineData.swift */; };
-		0A5F02DB2A2CE2F400D853D8 /* RoutineCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02DA2A2CE2F400D853D8 /* RoutineCheck.swift */; };
-		0A5F02DD2A2D03A000D853D8 /* RoutineWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02DC2A2D03A000D853D8 /* RoutineWeek.swift */; };
 		0A5F02E12A2D0A3000D853D8 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02E02A2D0A3000D853D8 /* CheckView.swift */; };
 		0A5F02E32A2D0B1100D853D8 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02E22A2D0B1100D853D8 /* WeekView.swift */; };
 		0AE9AE2F2A2E04400077256A /* RoutineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9AE2E2A2E04400077256A /* RoutineDetailView.swift */; };
 		0AE9AE312A2FB91D0077256A /* RoutineEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9AE302A2FB91D0077256A /* RoutineEditorView.swift */; };
-		0AE9AE332A300F720077256A /* RoutineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9AE322A300F720077256A /* RoutineModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,13 +29,10 @@
 		0A5F02D22A29745700D853D8 /* WeeklyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
 		0A5F02D42A29780C00D853D8 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
 		0A5F02D82A2995A500D853D8 /* RoutineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineData.swift; sourceTree = "<group>"; };
-		0A5F02DA2A2CE2F400D853D8 /* RoutineCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCheck.swift; sourceTree = "<group>"; };
-		0A5F02DC2A2D03A000D853D8 /* RoutineWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineWeek.swift; sourceTree = "<group>"; };
 		0A5F02E02A2D0A3000D853D8 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		0A5F02E22A2D0B1100D853D8 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		0AE9AE2E2A2E04400077256A /* RoutineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDetailView.swift; sourceTree = "<group>"; };
 		0AE9AE302A2FB91D0077256A /* RoutineEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineEditorView.swift; sourceTree = "<group>"; };
-		0AE9AE322A300F720077256A /* RoutineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +100,6 @@
 			children = (
 				0A5F02CE2A28471F00D853D8 /* Routine.swift */,
 				0A5F02D82A2995A500D853D8 /* RoutineData.swift */,
-				0A5F02DA2A2CE2F400D853D8 /* RoutineCheck.swift */,
-				0A5F02DC2A2D03A000D853D8 /* RoutineWeek.swift */,
-				0AE9AE322A300F720077256A /* RoutineModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,8 +174,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE9AE332A300F720077256A /* RoutineModel.swift in Sources */,
-				0A5F02DB2A2CE2F400D853D8 /* RoutineCheck.swift in Sources */,
 				0A5F02BF2A28454200D853D8 /* DailyRoutineApp.swift in Sources */,
 				0AE9AE2F2A2E04400077256A /* RoutineDetailView.swift in Sources */,
 				0A5F02D92A2995A500D853D8 /* RoutineData.swift in Sources */,
@@ -194,7 +183,6 @@
 				0A5F02E32A2D0B1100D853D8 /* WeekView.swift in Sources */,
 				0AE9AE312A2FB91D0077256A /* RoutineEditorView.swift in Sources */,
 				0A5F02D32A29745700D853D8 /* WeeklyView.swift in Sources */,
-				0A5F02DD2A2D03A000D853D8 /* RoutineWeek.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,3 +24,15 @@ struct Routine: Identifiable {
         targetCount: 3,
         weeks: [RoutineWeek(week: "2023년 6월 2주", check: [RoutineCheck(isCompleted: true), RoutineCheck(isCompleted: true), RoutineCheck(), RoutineCheck()])])
 }
+
+struct RoutineWeek: Identifiable {
+    var id = UUID()
+    var week = ""
+    var check = [RoutineCheck]()
+}
+
+struct RoutineCheck: Identifiable, Equatable {
+    var id = UUID()
+    var isCompleted = false
+}
+
