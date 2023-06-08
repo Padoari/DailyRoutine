@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoutineCheck: Identifiable {
+struct RoutineCheck: Identifiable, Equatable {
     var id = UUID()
     var isCompleted = false
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoutineWeek: Identifiable{
+struct RoutineWeek: Identifiable {
     var id = UUID()
     var week = ""
     var check = [RoutineCheck]()
