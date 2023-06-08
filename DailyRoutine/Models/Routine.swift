@@ -14,12 +14,9 @@ struct Routine: Identifiable {
     var targetCount = 1
     var weeks = [RoutineWeek]()
     
-//    init(title: String, description: String, targetCount: Int) {
-//        self.title = ""
-//        self.description = ""
-//        self.targetCount = 1
-//        self.weeks = [RoutineWeek(week: "", check: [RoutineCheck](repeating: RoutineCheck(), count: targetCount))]
-//    }
+    mutating func AddWeek(week: String) {
+        self.weeks.append(contentsOf: [RoutineWeek(week: week, check: [RoutineCheck](repeating: RoutineCheck(), count: targetCount))])
+    }
     
     static var example = Routine(
         title: "스터디 이름",

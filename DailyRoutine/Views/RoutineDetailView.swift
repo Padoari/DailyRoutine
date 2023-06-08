@@ -13,12 +13,12 @@ struct RoutineDetailView: View {
     
     func incrementStep(){
         routine.targetCount += 1
-        routine.weeks = [RoutineWeek(week: "", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
+        routine.weeks = [RoutineWeek(week: "Default", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
     }
     
     func decrementStep(){
         routine.targetCount -= 1
-        routine.weeks = [RoutineWeek(week: "", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
+        routine.weeks = [RoutineWeek(week: "Default", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
     }
     
 

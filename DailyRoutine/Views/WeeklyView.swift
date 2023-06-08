@@ -29,12 +29,14 @@ struct WeeklyView: View {
                     HStack(spacing: 16.0) {
                         Button {
                             self.selectedDate = self.calendar.date(byAdding: .day, value: -7, to: self.selectedDate) ?? self.selectedDate
+                            newRoutine.AddWeek(week: "\(formattedDate(selectedDate))")
                         } label: {
                             Image(systemName: "chevron.left")
                         }
                         
                         Button {
                             self.selectedDate = self.calendar.date(byAdding: .day, value: 7, to: self.selectedDate) ?? self.selectedDate
+                            newRoutine.AddWeek(week: "\(formattedDate(selectedDate))")
                         } label: {
                             Image(systemName: "chevron.right")
                         }
@@ -51,7 +53,7 @@ struct WeeklyView: View {
 //                            RoutineView(routine: routines)
 //                        }
                         routines in
-                        RoutineView(routine: routines)
+                        RoutineView(routine: routines, selectedWeek: "\(formattedDate(selectedDate))")
                     }
                 }
                 
