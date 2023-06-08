@@ -13,18 +13,18 @@ struct RoutineDetailView: View {
     
     func incrementStep(){
         routine.targetCount += 1
-        routine.weeks = [RoutineWeek(week: "Default", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
+        routine.weeks = [RoutineWeek(week: "Default", check: Array(repeating: RoutineCheck(), count: routine.targetCount).map { _ in RoutineCheck() })] // map -> 새로운 인스턴스 생성
+
     }
     
     func decrementStep(){
         routine.targetCount -= 1
-        routine.weeks = [RoutineWeek(week: "Default", check: [RoutineCheck](repeating: RoutineCheck(), count: routine.targetCount))]
+        routine.weeks = [RoutineWeek(week: "Default", check: Array(repeating: RoutineCheck(), count: routine.targetCount).map { _ in RoutineCheck() })]
+
     }
     
 
     var body: some View {
-        
-
         Form{
             VStack(alignment: .leading) {
                 if isEditing{
