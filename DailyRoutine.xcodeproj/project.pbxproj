@@ -8,17 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		0A5F02BF2A28454200D853D8 /* DailyRoutineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02BE2A28454200D853D8 /* DailyRoutineApp.swift */; };
-		0A5F02C12A28454200D853D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02C02A28454200D853D8 /* ContentView.swift */; };
 		0A5F02C32A28454300D853D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5F02C22A28454300D853D8 /* Assets.xcassets */; };
 		0A5F02C62A28454300D853D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5F02C52A28454300D853D8 /* Preview Assets.xcassets */; };
+		0A5F02CF2A28471F00D853D8 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02CE2A28471F00D853D8 /* Routine.swift */; };
+		0A5F02D32A29745700D853D8 /* WeeklyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02D22A29745700D853D8 /* WeeklyView.swift */; };
+		0A5F02D52A29780C00D853D8 /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02D42A29780C00D853D8 /* RoutineView.swift */; };
+		0A5F02D92A2995A500D853D8 /* RoutineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02D82A2995A500D853D8 /* RoutineData.swift */; };
+		0A5F02E12A2D0A3000D853D8 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02E02A2D0A3000D853D8 /* CheckView.swift */; };
+		0A5F02E32A2D0B1100D853D8 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F02E22A2D0B1100D853D8 /* WeekView.swift */; };
+		0AE9AE2F2A2E04400077256A /* RoutineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9AE2E2A2E04400077256A /* RoutineDetailView.swift */; };
+		0AE9AE312A2FB91D0077256A /* RoutineEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9AE302A2FB91D0077256A /* RoutineEditorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A5F02BB2A28454200D853D8 /* DailyRoutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyRoutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5F02BE2A28454200D853D8 /* DailyRoutineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRoutineApp.swift; sourceTree = "<group>"; };
-		0A5F02C02A28454200D853D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0A5F02C22A28454300D853D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A5F02C52A28454300D853D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A5F02CE2A28471F00D853D8 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		0A5F02D22A29745700D853D8 /* WeeklyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyView.swift; sourceTree = "<group>"; };
+		0A5F02D42A29780C00D853D8 /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
+		0A5F02D82A2995A500D853D8 /* RoutineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineData.swift; sourceTree = "<group>"; };
+		0A5F02E02A2D0A3000D853D8 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		0A5F02E22A2D0B1100D853D8 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		0AE9AE2E2A2E04400077256A /* RoutineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDetailView.swift; sourceTree = "<group>"; };
+		0AE9AE302A2FB91D0077256A /* RoutineEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,9 @@
 		0A5F02BD2A28454200D853D8 /* DailyRoutine */ = {
 			isa = PBXGroup;
 			children = (
+				0A5F02CD2A2846DA00D853D8 /* Models */,
+				0A5F02CC2A2846C600D853D8 /* Views */,
 				0A5F02BE2A28454200D853D8 /* DailyRoutineApp.swift */,
-				0A5F02C02A28454200D853D8 /* ContentView.swift */,
 				0A5F02C22A28454300D853D8 /* Assets.xcassets */,
 				0A5F02C42A28454300D853D8 /* Preview Content */,
 			);
@@ -65,6 +80,28 @@
 				0A5F02C52A28454300D853D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0A5F02CC2A2846C600D853D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A5F02D22A29745700D853D8 /* WeeklyView.swift */,
+				0A5F02D42A29780C00D853D8 /* RoutineView.swift */,
+				0A5F02E02A2D0A3000D853D8 /* CheckView.swift */,
+				0A5F02E22A2D0B1100D853D8 /* WeekView.swift */,
+				0AE9AE2E2A2E04400077256A /* RoutineDetailView.swift */,
+				0AE9AE302A2FB91D0077256A /* RoutineEditorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A5F02CD2A2846DA00D853D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A5F02CE2A28471F00D853D8 /* Routine.swift */,
+				0A5F02D82A2995A500D853D8 /* RoutineData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5F02C12A28454200D853D8 /* ContentView.swift in Sources */,
 				0A5F02BF2A28454200D853D8 /* DailyRoutineApp.swift in Sources */,
+				0AE9AE2F2A2E04400077256A /* RoutineDetailView.swift in Sources */,
+				0A5F02D92A2995A500D853D8 /* RoutineData.swift in Sources */,
+				0A5F02E12A2D0A3000D853D8 /* CheckView.swift in Sources */,
+				0A5F02D52A29780C00D853D8 /* RoutineView.swift in Sources */,
+				0A5F02CF2A28471F00D853D8 /* Routine.swift in Sources */,
+				0A5F02E32A2D0B1100D853D8 /* WeekView.swift in Sources */,
+				0AE9AE312A2FB91D0077256A /* RoutineEditorView.swift in Sources */,
+				0A5F02D32A29745700D853D8 /* WeeklyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

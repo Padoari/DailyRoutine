@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct DailyRoutineApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                WeeklyView()
+                    .environmentObject(RoutineData())
+            }
         }
     }
 }
